@@ -26,23 +26,31 @@
 
     .container {
       text-align: center;
-      max-width: 480px;
+      max-width: 520px;
       width: 100%;
     }
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      margin-bottom: 2rem;
+    .brand-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-subtitle {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 1;
+      margin-top: 1.5rem;
     }
 
     .logo {
-      max-width: 320px;
+      max-width: 280px;
       width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto;
+      margin: 1.5rem auto;
     }
 
     /* Dark Mode: Pure White Text on Pure Black Background */
@@ -56,16 +64,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>Diamanti Keyboard Design</h1>
+    <h1 class="brand-title">Diamanti</h1>
     
     <!-- Automatic Dark/Light Mode Logo Switching -->
     <picture>
-      <!-- Served when browser/OS is in Dark Mode -->
+      <!-- Served in Dark Mode (Pure Black Background) -->
       <source srcset="logo-light.png" media="(prefers-color-scheme: dark)">
       
-      <!-- Default fallback for Light Mode -->
+      <!-- Fallback / Light Mode (Pure White Background) -->
       <img src="logo-dark.png" alt="Diamanti Keyboard Design Logo" class="logo">
     </picture>
+
+    <p class="brand-subtitle">Keyboard Design</p>
   </div>
 </body>
 </html>
