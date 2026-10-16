@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diamanti Keyboard Design</title>
+  <title>DIAMANTI Keyboard Design</title>
   <style>
     * {
       margin: 0;
@@ -31,19 +31,21 @@
       width: 100%;
     }
 
-    /* Primary Title: Serif Stack */
+    /* Primary Title: Serif Stack, All Caps, Expanded Tracking */
     .brand-title {
       font-family: "Baskerville", "Georgia", "Garamond", "Times New Roman", serif;
-      font-size: 2.5rem;
+      font-size: 2.25rem; /* Slightly smaller to compensate for caps expansion */
       font-weight: 600;
-      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      letter-spacing: 0.12em; /* Gives the caps breathing room */
+      margin-right: -0.12em; /* Offsets the trailing space on the last letter to keep it perfectly centered */
     }
 
     /* Subtitle: Inherits Sans-Serif Stack */
     .brand-subtitle {
-      font-size: 1.5rem;
+      font-size: 1.35rem; /* Balanced with the new title weight */
       font-weight: 400;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-top: 1.5rem;
     }
@@ -96,7 +98,7 @@
       <source srcset="logo-light.png" media="(prefers-color-scheme: dark)">
       
       <!-- Fallback / Light Mode (Pure White Background) -->
-      <img src="logo-dark.png" alt="Diamanti Keyboard Design Logo" class="logo">
+      <img src="logo-dark.png" alt="DIAMANTI Keyboard Design Logo" class="logo">
     </picture>
 
     <p class="brand-subtitle">Keyboard Design</p>
