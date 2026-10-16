@@ -10,27 +10,33 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    /* Default (Light Mode) Styling */
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: #f8fafc;
+      color: #0f172a;
       padding: 1.5rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .container {
       text-align: center;
       max-width: 480px;
       width: 100%;
     }
+
     h1 {
       font-size: 2rem;
       font-weight: 600;
       letter-spacing: -0.025em;
       margin-bottom: 2rem;
     }
+
     .logo {
       max-width: 320px;
       width: 100%;
@@ -38,12 +44,28 @@
       display: block;
       margin: 0 auto;
     }
+
+    /* Dark Mode Theme Adjustment */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Diamanti Keyboard Design</h1>
-    <img src="logo.png" alt="Diamanti Keyboard Design Logo" class="logo">
+    
+    <!-- Automatic Dark/Light Mode Logo Switching -->
+    <picture>
+      <!-- Served when browser/OS is in Dark Mode -->
+      <source srcset="logo-light.png" media="(prefers-color-scheme: dark)">
+      
+      <!-- Default fallback for Light Mode -->
+      <img src="logo-dark.png" alt="Diamanti Keyboard Design Logo" class="logo">
+    </picture>
   </div>
 </body>
 </html>
