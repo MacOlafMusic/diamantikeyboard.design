@@ -17,6 +17,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      /* Base sans-serif font for body & subtitle */
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       background-color: #ffffff;
       color: #000000;
@@ -30,12 +31,15 @@
       width: 100%;
     }
 
+    /* Primary Title: Serif Stack */
     .brand-title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-family: "Baskerville", "Georgia", "Garamond", "Times New Roman", serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
+    /* Subtitle: Inherits Sans-Serif Stack */
     .brand-subtitle {
       font-size: 1.5rem;
       font-weight: 400;
@@ -52,7 +56,7 @@
       margin: 1.5rem auto;
     }
 
-    /* Secondary Action Link / Button */
+    /* Secondary Action Link */
     .shop-link {
       display: inline-block;
       margin-top: 2.5rem;
